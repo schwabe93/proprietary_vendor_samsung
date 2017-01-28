@@ -37,11 +37,10 @@ PRODUCT_COPY_FILES += \
 # GPS
 PRODUCT_COPY_FILES += \
   vendor/samsung/ha3g/proprietary/bin/gpsd:system/bin/gpsd \
-  vendor/samsung/ha3g/proprietary/lib/libGLES_trace.so:system/lib/libGLES_trace.so \
   vendor/samsung/ha3g/proprietary/lib/hw/gps.universal5420.so:system/lib/hw/gps.universal5420.so \
   vendor/samsung/ha3g/proprietary/lib/libwrappergps.so:system/lib/libwrappergps.so
 
-# Prebuilt Audio because of the Yamaha chip I HATE THIS
+# Prebuilt Audio and Samsung sound effects. Because of the Yamaha chip I HATE THIS
 PRODUCT_COPY_FILES += \
   vendor/samsung/ha3g/proprietary/lib/hw/audio_policy.universal5420.so:system/lib/hw/audio_policy.universal5420.so \
   vendor/samsung/ha3g/proprietary/lib/hw/audio.primary.universal5420.so:system/lib/hw/audio.primary.universal5420.so \
@@ -59,29 +58,6 @@ PRODUCT_COPY_FILES += \
   vendor/samsung/ha3g/proprietary/lib/lib_Samsung_AudioZoom_v102.so:system/lib/lib_Samsung_AudioZoom_v102.so \
   vendor/samsung/ha3g/proprietary/lib/lib_SoundBooster_ver402.so:system/lib/lib_SoundBooster_ver402.so \
   vendor/samsung/ha3g/proprietary/usr/share/alsa/alsa.conf:system/usr/share/alsa/alsa.conf
-
-# Samsung Sound effects I HATE THIS
-PRODUCT_COPY_FILES += \
-  vendor/samsung/ha3g/proprietary/lib/libaudiosa.so:system/lib/libaudiosa.so \
-  vendor/samsung/ha3g/proprietary/lib/lib_SA_GoogleFX_ver124b.so:system/lib/lib_SA_GoogleFX_ver124b.so \
-  vendor/samsung/ha3g/proprietary/lib/soundfx/libaudiosa_sec.so:system/lib/soundfx/libaudiosa_sec.so \
-  vendor/samsung/ha3g/proprietary/lib/lib_SoundAlive_play_ver125e.so:system/lib/lib_SoundAlive_play_ver125e.so \
-  vendor/samsung/ha3g/proprietary/lib/libsamsungSoundbooster_ext.so:system/lib/libsamsungSoundbooster_ext.so \
-  vendor/samsung/ha3g/proprietary/lib/lib_Samsung_Resampler.so:system/lib/lib_Samsung_Resampler.so \
-  vendor/samsung/ha3g/proprietary/lib/lib_soundaliveresampler.so:system/lib/lib_soundaliveresampler.so \
-  vendor/samsung/ha3g/proprietary/lib/libsamsungRecord.so:system/lib/libsamsungRecord.so \
-  vendor/samsung/ha3g/proprietary/lib/libsamsungRecord_ns.so:system/lib/libsamsungRecord_ns.so \
-  vendor/samsung/ha3g/proprietary/lib/libsamsungRecord_zoom.so:system/lib/libsamsungRecord_zoom.so \
-  vendor/samsung/ha3g/proprietary/lib/lib_SoundAlive_SRC192_ver205.so:system/lib/lib_SoundAlive_SRC192_ver205.so \
-  vendor/samsung/ha3g/proprietary/lib/lib_SamsungRec_V04004.so:system/lib/lib_SamsungRec_V04004.so \
-  vendor/samsung/ha3g/proprietary/lib/lib_DNSe_NRSS_ver226.so:system/lib/lib_DNSe_NRSS_ver226.so \
-  vendor/samsung/ha3g/proprietary/lib/lib_Samsung_AudioZoom_v102.so:system/lib/lib_Samsung_AudioZoom_v102.so \
-  vendor/samsung/ha3g/proprietary/lib/lib_SoundBooster_ver402.so:system/lib/lib_SoundBooster_ver402.so \
-  vendor/samsung/ha3g/proprietary/lib/libmysound.so:system/lib/libmysound.so \
-  vendor/samsung/ha3g/proprietary/lib/libaudiosa.so:system/lib/libaudiosa.so \
-  vendor/samsung/ha3g/proprietary/lib/lib_SA_GoogleFX_ver124b.so:system/lib/lib_SA_GoogleFX_ver124b.so \
-  vendor/samsung/ha3g/proprietary/lib/soundfx/libaudiosa_sec.so:system/lib/soundfx/libaudiosa_sec.so \
-  vendor/samsung/ha3g/proprietary/lib/lib_SoundAlive_play_ver125e.so:system/lib/lib_SoundAlive_play_ver125e.so
 
 # Yamaha data files
 PRODUCT_COPY_FILES += \
@@ -157,50 +133,8 @@ PRODUCT_COPY_FILES += \
   vendor/samsung/ha3g/proprietary/etc/ymc/param/aec_sidetone_vol_wb.dat:system/etc/ymc/param/aec_sidetone_vol_wb.dat \
   vendor/samsung/ha3g/proprietary/etc/ymc/param/aec_sp_dac1.dat:system/etc/ymc/param/aec_sp_dac1.dat
 
-# Prebuilt Scaler and HDMI I HATE THIS
-PRODUCT_COPY_FILES += \
-  vendor/samsung/ha3g/proprietary/lib/libcsc.so:system/lib/libcsc.so \
-  vendor/samsung/ha3g/proprietary/lib/libexynosgscaler.so:system/lib/libexynosgscaler.so \
-  vendor/samsung/ha3g/proprietary/lib/libexynosscaler.so:system/lib/libexynosscaler.so \
-  vendor/samsung/ha3g/proprietary/lib/libexynosutils.so:system/lib/libexynosutils.so
-
-# Prebuilt OMX I HATE THIS
-PRODUCT_COPY_FILES += \
-  vendor/samsung/ha3g/proprietary/lib/omx/libOMX.Exynos.AVC.Decoder.so:system/lib/omx/libOMX.Exynos.AVC.Decoder.so \
-  vendor/samsung/ha3g/proprietary/lib/omx/libOMX.Exynos.AVC.Encoder.so:system/lib/omx/libOMX.Exynos.AVC.Encoder.so \
-  vendor/samsung/ha3g/proprietary/lib/omx/libOMX.Exynos.MPEG4.Decoder.so:system/lib/omx/libOMX.Exynos.MPEG4.Decoder.so \
-  vendor/samsung/ha3g/proprietary/lib/omx/libOMX.Exynos.MPEG4.Encoder.so:system/lib/omx/libOMX.Exynos.MPEG4.Encoder.so \
-  vendor/samsung/ha3g/proprietary/lib/omx/libOMX.Exynos.VP8.Decoder.so:system/lib/omx/libOMX.Exynos.VP8.Decoder.so \
-  vendor/samsung/ha3g/proprietary/lib/omx/libOMX.Exynos.VP8.Encoder.so:system/lib/omx/libOMX.Exynos.VP8.Encoder.so \
-  vendor/samsung/ha3g/proprietary/lib/omx/libOMX.Exynos.WMV.Decoder.so:system/lib/omx/libOMX.Exynos.WMV.Decoder.so \
-  vendor/samsung/ha3g/proprietary/lib/libExynosOMX_Resourcemanager.so:system/lib/libExynosOMX_Resourcemanager.so \
-  vendor/samsung/ha3g/proprietary/lib/libExynosOMX_Core.so:system/lib/libExynosOMX_Core.so \
-  vendor/samsung/ha3g/proprietary/lib/libsomx263dsw.so:system/lib/libsomx263dsw.so \
-  vendor/samsung/ha3g/proprietary/lib/libsomx264dsw.so:system/lib/libsomx264dsw.so \
-  vendor/samsung/ha3g/proprietary/lib/libsomxaacd.so:system/lib/libsomxaacd.so \
-  vendor/samsung/ha3g/proprietary/lib/libsomxaace.so:system/lib/libsomxaace.so \
-  vendor/samsung/ha3g/proprietary/lib/libsomxadpcmd.so:system/lib/libsomxadpcmd.so \
-  vendor/samsung/ha3g/proprietary/lib/libsomxamrd.so:system/lib/libsomxamrd.so \
-  vendor/samsung/ha3g/proprietary/lib/libsomxcmn.so:system/lib/libsomxcmn.so \
-  vendor/samsung/ha3g/proprietary/lib/libsomxcore.so:system/lib/libsomxcore.so \
-  vendor/samsung/ha3g/proprietary/lib/libsomxflacd.so:system/lib/libsomxflacd.so \
-  vendor/samsung/ha3g/proprietary/lib/libsomxhevcdsw.so:system/lib/libsomxhevcdsw.so \
-  vendor/samsung/ha3g/proprietary/lib/libsomxmp3d.so:system/lib/libsomxmp3d.so \
-  vendor/samsung/ha3g/proprietary/lib/libsomxmp4vdsw.so:system/lib/libsomxmp4vdsw.so \
-  vendor/samsung/ha3g/proprietary/lib/libsomxmp43d.so:system/lib/libsomxmp43d.so \
-  vendor/samsung/ha3g/proprietary/lib/libsomxsr263d.so:system/lib/libsomxsr263d.so \
-  vendor/samsung/ha3g/proprietary/lib/libsomxvc1dsw.so:system/lib/libsomxvc1dsw.so \
-  vendor/samsung/ha3g/proprietary/lib/libsomxvencsw.so:system/lib/libsomxvencsw.so \
-  vendor/samsung/ha3g/proprietary/lib/libsomxvp8d.so:system/lib/libsomxvp8d.so \
-  vendor/samsung/ha3g/proprietary/lib/libsomxwmad.so:system/lib/libsomxwmad.so \
-  vendor/samsung/ha3g/proprietary/lib/libsomxwmv7d.so:system/lib/libsomxwmv7d.so \
-  vendor/samsung/ha3g/proprietary/lib/libsomxwmv8d.so:system/lib/libsomxwmv8d.so \
-  vendor/samsung/ha3g/proprietary/lib/egl/libsomxaace.so:system/lib/egl/libsomxaace.so
-
 # Noise suppression
 PRODUCT_COPY_FILES += \
-  vendor/samsung/ha3g/proprietary/vendor/lib/liblvverx_3.20.03.so:system/vendor/lib/liblvverx_3.20.03.so \
-  vendor/samsung/ha3g/proprietary/vendor/lib/liblvvetx_3.20.03.so:system/vendor/lib/liblvvetx_3.20.03.so \
   vendor/samsung/ha3g/proprietary/vendor/etc/nxp/BargeIn/Tx_ControlParams_WIDEBAND_ANALOG_DOCK.txt:system/vendor/etc/nxp/BargeIn/Tx_ControlParams_WIDEBAND_ANALOG_DOCK.txt \
   vendor/samsung/ha3g/proprietary/vendor/etc/nxp/BargeIn/Tx_ControlParams_WIDEBAND_BLUETOOTH_SCO_HEADSET.txt:system/vendor/etc/nxp/BargeIn/Tx_ControlParams_WIDEBAND_BLUETOOTH_SCO_HEADSET.txt \
   vendor/samsung/ha3g/proprietary/vendor/etc/nxp/BargeIn/Tx_ControlParams_WIDEBAND_EARPIECE.txt:system/vendor/etc/nxp/BargeIn/Tx_ControlParams_WIDEBAND_EARPIECE.txt \
@@ -255,12 +189,6 @@ PRODUCT_COPY_FILES += \
   vendor/samsung/ha3g/proprietary/vendor/etc/nxp/mVoIPSec/Tx_ControlParams_WIDEBAND_SPEAKER.txt:system/vendor/etc/nxp/mVoIPSec/Tx_ControlParams_WIDEBAND_SPEAKER.txtvendor/etc/nxp/mVoIPSec/Tx_ControlParams_WIDEBAND_SPEAKER.txt \
   vendor/samsung/ha3g/proprietary/vendor/etc/nxp/mVoIPSec/Tx_ControlParams_WIDEBAND_WIRED_HEADPHONE.txt:system/vendor/etc/nxp/mVoIPSec/Tx_ControlParams_WIDEBAND_WIRED_HEADPHONE.txt \
   vendor/samsung/ha3g/proprietary/vendor/etc/nxp/mVoIPSec/Tx_ControlParams_WIDEBAND_WIRED_HEADSET.txt:system/vendor/etc/nxp/mVoIPSec/Tx_ControlParams_WIDEBAND_WIRED_HEADSET.txt 
-
-# SRP Audio driver for Samsung Exynos firmware
-PRODUCT_COPY_FILES += \
-  vendor/samsung/ha3g/proprietary/vendor/firmware/srp_cga.bin:system/vendor/firmware/srp_cga.bin \
-  vendor/samsung/ha3g/proprietary/vendor/firmware/srp_data.bin:system/vendor/firmware/srp_data.bin \
-  vendor/samsung/ha3g/proprietary/vendor/firmware/srp_vliw.bin:system/vendor/firmware/srp_vliw.bin
 
 # Bluetooth
 PRODUCT_COPY_FILES += \
